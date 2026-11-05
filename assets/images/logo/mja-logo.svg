@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="MJA Logo">
+  <defs>
+    <linearGradient id="g" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#D71920"/>
+      <stop offset="100%" stop-color="#A80F17"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="#17212B"/>
+  <path d="M26 90V30h18l18 26 18-26h18v60H80V56L62 82H58L40 56v34H26z" fill="url(#g)"/>
+  <path d="M82 90V30h12v60H82zm-36 0V30h12v60H46z" fill="#fff" opacity="0.9"/>
+</svg>
