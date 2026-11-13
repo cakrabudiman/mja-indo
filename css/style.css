@@ -341,10 +341,83 @@ button, input, textarea { font: inherit; }
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.6rem;
 }
-.project-card img {
-  width: 100%;
-  height: 230px;
-  object-fit: cover;
+.project-visual {
+  position: relative;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  overflow: hidden;
+  color: var(--white);
+}
+.project-visual::before,
+.project-visual::after {
+  content: '';
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 50%;
+}
+.project-visual::before {
+  top: -105px;
+  right: 40px;
+}
+.project-visual::after {
+  top: -78px;
+  right: -15px;
+}
+.project-visual-energy {
+  background: linear-gradient(120deg, #102d3a, #176b64);
+}
+.project-visual-agriculture {
+  background: linear-gradient(120deg, #284b35, #7a9a54);
+}
+.project-visual-mark {
+  position: relative;
+  z-index: 1;
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+.project-visual-year {
+  position: relative;
+  z-index: 1;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid rgba(255,255,255,0.45);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.project-card .project-visual + .card-body {
+  padding-top: 1.25rem;
+}
+.project-card .project-meta span {
+  color: var(--primary-red);
+  font-weight: 700;
+}
+.project-card .project-location {
+  color: var(--medium-gray);
+}
+.project-capacity {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+.project-capacity span {
+  color: var(--medium-gray);
+  font-size: 0.82rem;
+}
+.project-capacity strong {
+  color: var(--dark-navy);
+  font-size: 1.05rem;
+}
+.project-card .project-capacity + .text-link {
+  margin-top: 1rem;
 }
 .project-card .card-body {
   padding-top: 1.1rem;
@@ -490,6 +563,11 @@ button, input, textarea { font: inherit; }
   gap: 1rem;
   margin-bottom: 2rem;
 }
+.image-note {
+  margin: -1rem 0 1.5rem;
+  color: var(--medium-gray);
+  font-size: 0.9rem;
+}
 .search-wrap {
   flex: 1;
 }
@@ -526,7 +604,8 @@ button, input, textarea { font: inherit; }
 .product-card img {
   width: 100%;
   height: 210px;
-  object-fit: cover;
+  object-fit: contain;
+  background: #fff;
 }
 .product-card .card-body strong {
   display: block;
